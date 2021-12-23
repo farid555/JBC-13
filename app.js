@@ -29,10 +29,10 @@ formElm.addEventListener('submit', function (e) {
     let inputValue = Number(inputElm.value);
 
     if (inputValue === '' || inputValue < 1) {
-        if (!invalidInput) {
+        if (invalidInput) {
             formElm.insertAdjacentHTML(
                 'beforeBegin',
-                '<p iclass="invalid-input">Please input valid Number... </p>'
+                '<p class="invalid-input">Please input valid Number... </p>'
             )
         }
     } else {
