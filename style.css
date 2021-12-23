@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+*{
+    margin:0;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    background-color: rgba(41, 153, 218, 0.376);
+    
+    background-size: cover;
+    background-position: relative;
+    background-repeat: no-repeat;
+    min-width: 100vh ;
+    min-height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; 
+    font-size: 20px;
+  
+}
+
+.container{
+    position: relative;
+    width: 1150px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.container{
+    text-align: center;
+    position: relative;
+    width: 400px;
+    height: 620px;
+    background: linear-gradient(45deg, #7326ee , #07a3ec );
+    margin: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    background-attachment: fixed;
+}
+
+
+
+h1{
+    font-family: 'Andada Pro', serif;
+    color: white;
+    background-color: rgb(110, 198, 4);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    padding: 20px;
+    font-size: 30px;
+}
+span{
+    color: white;
+    padding: 50px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+}
+#input{
+    padding: 5px;
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    align-items: center;
+    background-color: rgb(28, 218, 25);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 1px;
+    margin: 10px ;
+    font-family: bold 20px 'Courier New', Courier, monospace;
+    color: white ;
+    cursor: pointer;
+}
+
+.reset{
+    background-color: rgb(155, 155, 59);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 1px;
+    display:inline-block;
+    margin: 10px;
+    font-family: bold 20px 'Courier New', Courier, monospace;
+    color: white ;
+    cursor: pointer;
+}
+
