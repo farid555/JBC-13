@@ -9,7 +9,9 @@ const p2BtnElm = document.querySelector('.p2Btn');
 const p1ScoreElm = document.querySelector('.p1Score');
 const p2ScoreElm = document.querySelector('.p2Score');
 const resetBtnElm = document.querySelector('.reset');
-const invalidInput = document.querySelector('.invalid-input')
+
+
+
 
 
 let winScore = 20;
@@ -26,25 +28,22 @@ p2ScoreElm.textContent = p2Score;
 formElm.addEventListener('submit', function (e) {
     e.preventDefault();
 
+
     let inputValue = Number(inputElm.value);
 
     if (inputValue === '' || inputValue < 1) {
-        if (invalidInput) {
-            formElm.insertAdjacentHTML(
-                'beforeBegin',
-                '<p class="invalid-input">Please input valid Number... </p>'
-            )
-        }
-    } else {
-        if (invalidInput) {
-            invalidInput.remove();
-        }
+
+        formElm.insertAdjacentHTML(
+            'beforeBegin',
+            '<p class="invalid-input">Please input valid Number... </p>'
+        )
+
     }
 
     winScore = inputValue;
     winScoreEle.textContent = winScore;
     inputElm.value = '';
-    intialPlayState();
+    //intialPlayState();
 
 })
 
@@ -78,9 +77,9 @@ function checkWiner() {
 
 function displayWiner(p1, p2) {
     if (p1) {
-        formElm.insertAdjacentHTML('beforeBegin', '<p>Player-1 is Winner </p>');
+        formElm.insertAdjacentHTML('beforeBegin', '<p class="messOne">Player-1 is Winner </p>');
     } else if (p2) {
-        formElm.insertAdjacentHTML('beforeBegin', '<p>Player-2 is Winner </p>');
+        formElm.insertAdjacentHTML('beforeBegin', '<p class="messOne">Player-2 is Winner </p>');
     }
 }
 
@@ -106,8 +105,14 @@ resetBtnElm.addEventListener('click', function (e) {
 
 })
 
+
+
 function intialPlayState() {
 
+    const invalidInput = document.querySelector('.invalid-input');
+    const messSelector = document.querySelector('.messOne');
+    console.log(invalidInput);
+    console.log(messSelector);
     p1Score = 0;
     p2Score = 0;
     turn = 'player1';
@@ -116,5 +121,15 @@ function intialPlayState() {
     p2ScoreElm.textContent = p2Score;
     p1BtnElm.removeAttribute('disabled');
     p2BtnElm.removeAttribute('disabled');
+    //messSelector.style.display = 'none';
+    if (messSelector) {
+        messSelector.style.display = 'none';
 
+
+    }
+    if (invalidInput) {
+        invalidInput.style.display = 'none';
+
+
+    }
 }
